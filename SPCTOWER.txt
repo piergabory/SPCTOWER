@@ -1,0 +1,270 @@
+Filename:SPCTOWER
+21→T↵
+Do↵
+T-1→T↵
+T>0 And T<21⇒Locate T,1,"⋇⋇-=≡=-=≡=-=≡=-=≡=-=≡=-"↵
+T+1>0 And T+1<21⇒Locate T+1,2,"⋇⋇ "↵
+T+2>0 And T+2<21⇒Locate T+2,3,"⋇⋇ "↵
+T+3>0 And T+3<21⇒Locate T+3,4,"⋇⋇ "↵
+T+4>0 And T+4<21⇒Locate T+4,5,"⋇⋇ "↵
+T+5>0 And T+5<21⇒Locate T+5,6,"⋇⋇ "↵
+T+6>0 And T+6<21⇒Locate T+6,7,"⋇⋇-=≡=-=≡=-=≡=-=≡=-=≡=-"↵
+LpWhile T≠-6↵
+Locate 1,2,"  "↵
+Locate 1,3,"  "↵
+Locate 1,4,"  "↵
+Locate 1,5,"  "↵
+Locate 1,6,"  "↵
+Locate 1,1,"⋇⋇-=≡=-=≡=-=≡=-=≡=-=≡=-"↵
+Locate 1,7,"⋇⋇-=≡=-=≡=-=≡=-=≡=-=≡=-"↵
+↵
+If (Int (√Θ))-√Θ≠0↵
+Then 0→Θ↵
+IfEnd↵
+0→A~Z↵
+Locate 1,1,"-=≡=-=≡=-=≡=-=≡=-=≡=-"↵
+Locate 1,7,"-=≡=-=≡=-=≡=-=≡=-=≡=-"↵
+Locate 15,4,"⊗"↵
+1→D↵
+Do↵
+For 1→T To 100↵
+Next↵
+Locate D,4," (𝐁="↵
+1+D→D↵
+LpWhile D≠6↵
+Locate 15,4,"⊗"↵
+9→D↵
+Do↵
+For 1→T To 100↵
+Next↵
+Locate D,4," :"↵
+D+1→D↵
+LpWhile D≠15↵
+Locate 15,4,"⋇⋇"↵
+For 1→T To 500↵
+Next↵
+Lbl 2↵
+Lbl M↵
+ClrText↵
+Locate 7,6,"|"↵
+Locate 7,5,"|"↵
+Locate 7,4,"|"↵
+Locate 7,3,"|"↵
+Locate 6,4,"(𝐁="↵
+Locate 15,4,"⋇"↵
+Locate 1,1,"-=≡=-=≡=-=≡=-=≡=-=≡=-"↵
+Locate 1,7,"-=≡=-=≡=-=≡=-=≡=-=≡=-"↵
+For 1→D To 20↵
+Locate 21-D,2,"SPACE |TOWER "↵
+Next↵
+Locate 9,4,"start"↵
+Locate 9,5,"infos"↵
+Locate 9,6,"exit"↵
+4→C↵
+0→T↵
+Do:Do↵
+Getkey→G↵
+Locate 6,C,"(𝐁="↵
+C≠6⇒Locate 6,C+1," | "↵
+C≠4⇒Locate 6,C-1," | "↵
+For 1→X To 50↵
+Next↵
+Locate 9,C,"     "↵
+For 1→X To 50↵
+Next↵
+Locate 9,4,"start"↵
+Locate 9,5,"infos"↵
+Locate 9,6,"exit"↵
+T+1→T↵
+LpWhile G≠28 And G≠37 And G≠78 And T<50↵
+G=28 And C≠4⇒C-1→C↵
+G=37 And C≠6⇒C+1→C↵
+T>50⇒6→C↵
+T>50⇒78→G↵
+For 1→X To 50↵
+Next↵
+0→T↵
+LpWhile G≠78↵
+If C=5↵
+Then ↵
+For 9→T To 21↵
+For 1→K To 50↵
+Next↵
+Locate T,5," :"↵
+Next↵
+ClrText↵
+Locate 1,1,"-=≡=-=≡=-=≡=-=≡=-=≡=-"↵
+Locate 1,2,"(𝐁=⇒ tower"↵
+Locate 1,3," ⊗ ⇒ asteroid"↵
+Locate 1,6,"best score:"↵
+If √Θ≤999↵
+Then Locate 12,6,√Θ↵
+Else Locate 12,6,"999"↵
+IfEnd↵
+Locate 1,4," : ⇒ shot"↵
+Locate 1,5,"●●○⇒life       "↵
+Locate 1,7,"-=≡=-=≡=-=≡=-=≡=-=≡=-"↵
+For 1→T To 500↵
+Next↵
+0→G↵
+Do↵
+Getkey→G↵
+Locate 16,6,"shift"↵
+For 1→T To 70↵
+Next↵
+Locate 16,6,"     "↵
+For 1→T To 70↵
+Next↵
+LpWhile G≠78 And G≠66↵
+G=66⇒Goto W↵
+G=78⇒Goto 2↵
+IfEnd↵
+If C=4↵
+Then For 9→T To 21↵
+For 1→X To 50↵
+Next↵
+Locate T,4," :"↵
+Next↵
+ClrText↵
+1→K:0→P:21→A↵
+Locate 1,1,"-=≡=-=≡=-=≡=-=≡=-=≡=-"↵
+Locate 1,7,"-=≡=-=≡=-=≡=-=≡=-=≡=-"↵
+Locate 1,2,"●●●"↵
+Locate 1,6,√Θ↵
+Locate 1,3,"---"↵
+Locate 1,4,"………"↵
+Locate 1,5,"---"↵
+Locate 4,2,""↵
+Locate 4,3,""↵
+Locate 4,4,""↵
+Locate 4,5,""↵
+Locate 4,6,""↵
+0→B:4→F:0→G:4→S:6→T:4→V:0→K↵
+Locate 4,S,"(𝐁="↵
+Do:Do↵
+S≠2⇒Locate 5,2,"|  "↵
+S≠3⇒Locate 5,3,"|  "↵
+S≠4⇒Locate 5,4,"|  "↵
+S≠5⇒Locate 5,5,"|  "↵
+S≠6⇒Locate 5,6,"|  "↵
+Locate 21,2," "↵
+Locate 21,3," "↵
+Locate 21,4," "↵
+Locate 21,5," "↵
+Locate 21,6," "↵
+A=21⇒Int (Ran#×5)+2→L↵
+A-1→A↵
+A=4⇒21→A↵
+Locate A,L,"⊗∴·· "↵
+0→G↵
+Getkey→G↵
+If B=1↵
+Then T+1→T↵
+Locate T,F," :"↵
+IfEnd↵
+If F=L↵
+Then If T>A-1↵
+Then 2→W↵
+IfEnd↵
+IfEnd↵
+If A=6↵
+Then 1→W↵
+IfEnd↵
+LpWhile G≠47 And G≠28 And G≠37 And G≠78 And T≠20 And W≠1 And W≠2 And W≠3↵
+G=47⇒Menu "≡=-=≡=-PAUSE-=≡=-=≡","Reprendre",R,"Retour au menu",M,"Quitter le jeu",Q↵
+Lbl R↵
+G=28 And S≠2⇒S-1→S↵
+G=37 And S≠6⇒S+1→S↵
+If W=3↵
+Then 0→W↵
+Locate Z,U,"                     "↵
+IfEnd↵
+If W=2↵
+Then Locate A-1,L," ⋇∴·                 "↵
+A-1→Z↵
+L→U↵
+P+(A-6)→P↵
+If P≤999 And P>0↵
+Then Locate 1,4,P↵
+Else Locate 1,4,"999"For 1→𝐫 To 200↵
+Next↵
+Goto W↵
+IfEnd↵
+21→A↵
+5→T↵
+3→W↵
+0→B↵
+IfEnd↵
+If W=1↵
+Then V-1→V↵
+V=3⇒Locate 3,2,"○"↵
+V=2⇒Locate 2,2,"○"↵
+V=1⇒Locate 1,2,"○"↵
+0→W↵
+IfEnd↵
+If G=78↵
+Then Locate T,F,"   "↵
+1→B↵
+Locate 4,S,"(𝐁="↵
+6→T↵
+IfEnd↵
+G=78⇒S→F↵
+If T=20↵
+Then Locate 20,F,"  "↵
+0→B:6→T:0→K↵
+IfEnd↵
+Locate 4,S,"(𝐁="↵
+S≠2⇒Locate 4,S-1,"   "↵
+S≠6⇒Locate 4,S+1,"   "↵
+LpWhile V≠0↵
+Locate 4,S,"∴⋇⋇∵  {GAME OVER}"↵
+For 1→T To 500↵
+Next↵
+21→T↵
+Do↵
+T-1→T↵
+T>0 And T<21⇒Locate T,2,"⋇⋇ "↵
+T+1>0 And T+1<21⇒Locate T+1,3,"⋇⋇ "↵
+T+2>0 And T+2<21⇒Locate T+2,4,"⋇⋇ "↵
+T+3>0 And T+3<21⇒Locate T+3,5,"⋇⋇ "↵
+T+4>0 And T+4<21⇒Locate T+4,6,"⋇⋇ "↵
+LpWhile T≠-6↵
+P>√Θ⇒(P×P)→Θ↵
+0→A~Z↵
+Goto 2↵
+IfEnd↵
+Lbl Q↵
+P>√Θ⇒(P×P)→Θ↵
+0→A~Z↵
+CoordOff↵
+Deg↵
+GridOff↵
+AxesOn↵
+LabelOff↵
+BG-None↵
+ViewWindow -10,10,1,-10,10,1↵
+21→T↵
+Do↵
+T-1→T↵
+T>0 And T<21⇒Locate T,1,"⋇⋇ "↵
+T+1>0 And T+1<21⇒Locate T+1,2,"⋇⋇ "↵
+T+2>0 And T+2<21⇒Locate T+2,3,"⋇⋇ "↵
+T+3>0 And T+3<21⇒Locate T+3,4,"⋇⋇ "↵
+T+4>0 And T+4<21⇒Locate T+4,5,"⋇⋇ "↵
+T+5>0 And T+5<21⇒Locate T+5,6,"⋇⋇ "↵
+T+6>0 And T+6<21⇒Locate T+6,7,"⋇⋇ "↵
+LpWhile T≠-6↵
+Goto Q↵
+Lbl W↵
+Locate 6,4,"YOU WIN·!·"↵
+Do↵
+Locate 7,5,"Shift"↵
+For 1→𝐫 To 500↵
+Next↵
+Locate 7,5,"     "↵
+LpWhile Getkey≠78↵
+Lbl Q↵
+ClrText↵
+ClrGraph↵
+
+
